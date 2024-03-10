@@ -1,0 +1,144 @@
+/* 
+========
+Common Style
+========
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+ul{
+    list-style: none;
+}
+/* 
+========
+Global Style
+========
+*/
+.container{
+    min-height: 100vh;
+    width: 100%;
+}
+.img-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid black;
+}
+.img-container li{
+    height: 400px;
+    width: 800px;
+    position: absolute;
+    border: 1.5px solid rgb(112, 255, 253);
+    overflow: hidden;
+
+}
+img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    /* animationできた */
+}
+/* 
+=====
+After NextBtn
+=====
+*/
+.backToDefault{
+    animation: backToDefault .5s ease 0s 1 normal forwards;
+}
+.showUp{
+    animation: showUp .5s ease 0s 1 normal forwards;
+}
+.dissapear{
+    animation: dissapear .5s ease 0s 1 normal forwards;
+}
+@keyframes backToDefault{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    } 
+}
+@keyframes showUp {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    } 
+}
+@keyframes dissapear {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    } 
+}
+/* 
+=====
+After PrevBtn
+=====
+*/
+.backToDefaultV2{
+    animation: backToDefaultV2 .5s ease 0s 1 normal forwards;
+}
+.showUpPrev{
+    animation: showUpPrev .5s ease 0s 1 normal forwards;
+}
+.dissapearPrev{
+    animation: dissapearPrev .5s ease 0s 1 normal forwards;
+}
+@keyframes showUpPrev {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    } 
+}
+@keyframes dissapearPrev {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    } 
+}
+@keyframes backToDefaultV2{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    } 
+}
+.btns{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+}
+button{
+    background:none;
+    border: none;
+    font-size: 1.5rem;
+    color:rgba(96, 255, 210, 0.7) ;
+    margin: 0 10px;
+}
+.next{
+    order: 4;
+}
+.prev{
+    order: 2;
+}
